@@ -1,4 +1,4 @@
-﻿namespace TestandoC.Entindades
+﻿namespace TestandoC.Entidades
 {
     internal class Cliente
     {

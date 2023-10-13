@@ -1,4 +1,4 @@
-﻿using TestandoC.Entindades;
+﻿using TestandoC.Entidades;
 
 Banco banco = new Banco("Banco do Brasil", 50000.00);
 
