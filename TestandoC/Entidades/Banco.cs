@@ -15,7 +15,6 @@
 
         public void CriarConta(string nome, double saldoInicial = 0) 
         {
-           
             if (saldoInicial >= 0)
             {
                 Cliente cliente = new Cliente(nome, saldoInicial, this);
@@ -26,8 +25,6 @@
             {
                 Console.WriteLine($"{nome}, tá pobre po? ");
             }
-
-
         }
 
         public void MostrarClientes()
@@ -36,7 +33,6 @@
             {
                 Console.WriteLine($"Nome: {Clientes[i].Nome}, Saldo: {Clientes[i].Saldo}");
             }
-
         }
 
         public void Transferir(Cliente origem, Cliente destino,  double valor) {

@@ -2,6 +2,8 @@
 
 Banco banco = new Banco("Banco do Brasil", 50000.00);
 
+Console.WriteLine($"---------- BEM-VINDO(A) AO {banco.Nome} ----------\n");
+
 banco.CriarConta("Sther");
 banco.CriarConta("Morales", 200.00);
 banco.CriarConta("Jurema", 3122.00);
@@ -13,5 +15,5 @@ Console.WriteLine($"{banco.Nome} {banco.SaldoTotal}");
 banco.MostrarClientes();
 
 
-banco.Clientes[1].Depositar(1000);
-banco.Clientes[1].Sacar(1000);
+banco.Clientes[1].Depositar();
+banco.Clientes[1].Sacar();
