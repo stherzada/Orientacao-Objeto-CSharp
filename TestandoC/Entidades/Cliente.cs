@@ -14,26 +14,32 @@
             this.Saldo = saldo;
         }
     
-        public void Depositar(double valor)
+        public void Depositar()
         {
+            Console.Write("\nDigite o quanto você quer depositar: R$ ");
+            double valor = Convert.ToDouble(Console.ReadLine());
+
             if (valor > 0)
             {
                 Saldo += valor;
                 Banco.SaldoTotal += Saldo;
-                Console.WriteLine(Banco.SaldoTotal);
+                Console.WriteLine($"Deposito -> {Banco.Nome}: {String.Format("{0:C}", Banco.SaldoTotal)}");
             }
             else
             {
                 Console.WriteLine($"{Nome} tá querendo me passar a perna?");
             }
         }
-        public void Sacar(double valor) 
+        public void Sacar()
         {
+            Console.Write("Digite o quanto você quer sacar: ");
+            double valor = Convert.ToDouble(Console.ReadLine());
+
             if (Saldo >= valor)
             {
                 Saldo -= valor;
                 Banco.SaldoTotal -= valor;
-                Console.WriteLine(Banco.SaldoTotal);
+                Console.WriteLine($"Saque -> {Banco.Nome}: {String.Format("{0:C}", Banco.SaldoTotal)}");
             }
             else
             {
